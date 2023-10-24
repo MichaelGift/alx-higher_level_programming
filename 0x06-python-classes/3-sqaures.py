@@ -3,14 +3,13 @@
 This module contains a class that defines a square.
 """
 
-
 class Square():
     """Defines a square."""
 
     def __init__(self, size=0):
         """Sets the necessary attributes for the Square object.
         Args:
-            size (int): the length of one edge.
+            size (int): the legth of one edge.
         Raises:
             TypeError: if size is not given as an integer.
             ValueError: if size is less than 0.
@@ -23,7 +22,6 @@ class Square():
         else:
             raise TypeError("size must be an integer")
 
-
     def area(self):
-        """Returns current square area."""
+        """Returns the current square area."""
         return self.__size ** 2
