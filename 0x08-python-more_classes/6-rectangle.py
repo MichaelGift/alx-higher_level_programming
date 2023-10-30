@@ -7,7 +7,7 @@ This module contains a class that defines a rectangle.
 class Rectangle():
     """Defines a rectangle."""
 
-    instances = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Sets the necessary attributes for the Rectangle object.
@@ -17,7 +17,7 @@ class Rectangle():
         """
         self.width = width
         self.height = height
-        Rectangle.instances += 1
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         """Sets the print behavior of the Rectangle object."""
@@ -75,5 +75,5 @@ class Rectangle():
 
     def __del__(self):
         """Sets the del behavior of the Rectangle object."""
-        Rectangle.instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
