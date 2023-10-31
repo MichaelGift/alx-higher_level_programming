@@ -55,42 +55,42 @@ Now use it:
 	>>> add_integer(-1.5, -3.5)
 	-4
 
-	>>> add_integer(float('float'), 1)
+	>>> add_integer(float('inf'), 1)
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
 
-	>>> add_integer(float('float'), float('float'))
+	>>> add_integer(float('inf'), float('inf'))
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
 
-	>>> add_integer(1, float('float'))
+	>>> add_integer(1, float('inf'))
 	Traceback (most recent call last):
 	...
 	TypeError: b must be an integer
 
-	>>> add_integer(float('float'))
+	>>> add_integer(float('inf'))
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
 
-	>>> add_integer(-float('float'), 1)
+	>>> add_integer(-float('inf'), 1)
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
 
-	>>> add_integer(-float('float'), -float('float'))
+	>>> add_integer(-float('inf'), -float('inf'))
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
 
-	>>> add_integer(1, -float('float'))
+	>>> add_integer(1, -float('inf'))
 	Traceback (most recent call last):
 	...
 	TypeError: b must be an integer
 
-	>>> add_integer(-float('float'))
+	>>> add_integer(-float('inf'))
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
