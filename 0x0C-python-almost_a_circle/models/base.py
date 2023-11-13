@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This is the base module
-It contains the "base" to be used throught the project
+It contains the "base" to be used throughout the project
 """
 
 
@@ -25,4 +25,4 @@ class Base():
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = __nb_objects
+            self.id = Base.__nb_objects
