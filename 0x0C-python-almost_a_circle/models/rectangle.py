@@ -25,8 +25,68 @@ class Rectangle(Base):
         __x (int): The horizontal padding of the rectangle
         __y (int): The vertical padding of the rectangle
         """
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
+
+    # width getter setter.
+    @property
+    def width(self):
+        """Get the width of the rectangle."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Set the width of the rectangle"""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+
+    # height getter setter.
+    @property
+    def height(self):
+        """Get the height of the Rectangle."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """set the height of the rectangle"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
+
+    # x getter setter.
+    @property
+    def x(self):
+        """Get the x padding of the rectangle."""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """Set the x padding of the rectangle"""
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    # y  getter setter.
+    @property
+    def y(self):
+        """Get y padding of the rectangle."""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Set y padding of the rectangle"""
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
