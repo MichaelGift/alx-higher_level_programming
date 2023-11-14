@@ -22,7 +22,6 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
         """
         Return attributes in [Square] (<id>) <x>/<y> - <size> format
@@ -40,3 +39,24 @@ class Square(Rectangle):
         """Sets the size of the square"""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Updates the sqaure attributes.
+        Args:
+            args (list): positional arguments to be modified [id, width, height, x, y].
+            kwargs (dict): keyword arguments to be modified.
+        """
+        kwarg_pairs = {}
+        if args is not None and len(args) > 0:
+            keys = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args) if len(args) <= 5 else 5):
+                kwarg_pairs[keys[i]] = args[i]
+        else:
+            kwarg_pairs = kwargs
+
+        if len(kwarg_pairs) > 0:
+            for key, value in kwarg_pairs.items():
+                if key == 'id' and value is None:
+                    self.__init__(self.width, self.height, self.x, self.y)
+                else:
+                    setattr(self, key, value)
