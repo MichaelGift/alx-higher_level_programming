@@ -1,4 +1,2 @@
-This repository contains practice tasks for ALX python
-> Why worship legends when you know you could join them.
-> 
-> Lil Nas X - Star Walkin'
+# High-Level programming
+This repo contains alx concepts for learning and using high level programming languages like Python and JS
